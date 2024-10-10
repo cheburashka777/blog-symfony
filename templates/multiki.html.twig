@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block back %}
+    <div class="back"><a href="../">← Назад</a></div>
+{% endblock %}
+
+{% block body %}
+    <video controls src="{{ asset('public/videos/multik1.mp4') }}" style="width: 100%;"></video>
+    <video controls src="{{ asset('public/videos/multik2.mp4') }}" style="width: 100%;"></video>
+    <video controls src="{{ asset('public/videos/multik3.mp4') }}" style="width: 100%;"></video>
+{% endblock %}

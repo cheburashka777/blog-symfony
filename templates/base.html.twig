@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{ asset('public/images/posterText.png') }}">
+    <title>Собственный сайт <<4.E.6.Y.P.A.III.K.A>></title>
+    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+    <link rel="shortcut icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
+</head>
+<body background="{{ asset('public/images/background.jpg') }}">
+
+<div id="bodyDate">Сегодня:<br><span id="bodyDateText">ПЯТНИЦА!!!</span></div>
+
+{% block back %}{% endblock %}
+
+<div class="wr">
+    {% block body %}{% endblock %}
+</div>
+<br>
+<div class="titri">
+    <div>
+        Tarakashka, 2022-{{ "now"|date("Y") }}<br>Все права защищены.
+        <center><img src="http://lionovsky.ru/img/icons/counter.gif" alt="ЦифАрки"></center>
+    </div>
+</div>
+</center>
+<button class="perehod" onclick="window.location.href = '/sekretka';">Перейти куда-то</button>
+<script src="{{ asset('public/js/main.js') }}"></script>
+</body>
+</html>

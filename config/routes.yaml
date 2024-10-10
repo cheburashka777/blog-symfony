@@ -1,0 +1,25 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+news:
+    path: /news
+    controller: App\Controller\NewsController::index
+
+post:
+    path: /post
+    controller: App\Controller\PostController::createPost
+
+sekretka:
+    path: /sekretka
+    controller: App\Controller\SecretController::index
+
+multiki:
+    path: /multiki
+    controller: App\Controller\MultikiController::index

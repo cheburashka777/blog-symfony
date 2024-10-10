@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="header">
+        <div class="poster"><img src="{{ asset('public/images/posterText.png') }}" alt="Добро пожаловать на мой сайт!
+            Его сделал самый известный мододел, 3D-моделировщик, 3D-аниматор, художник, монтажёр по имени
+            <<4.E.6.Y.P.A.III.K.A>>!" style="max-width: 100%;"></div>
+    </div>
+
+    <div class="menu">
+        <div class="podzagol">Менюха</div>
+        <div class="menu_punkt">Ссылочки</div>
+        <a href="https://openvk.su/fucking_kiska" class="link"><img src="{{ asset('public/images/ovk.png') }}" width="16px" height="16px" style="vertical-align: middle;">OpenVK</a>
+        <br>
+        <a href="https://www.youtube.com/channel/UCSTEjHNkDphkixULCrzTsTA" class="link"><img src="https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico" style="vertical-align: middle;">YouTube</a>
+        <br>
+        <a href="https://t.me/krasava2008" class="link"><img src="https://telegram.org/favicon.ico?4" width="16" height="16" style="vertical-align: middle;">Telegram</a>
+        <br>
+        <div class="jab" onclick="alert('PizDuck@jabber.ru, VeRmIsHeL@jabbka.ru и 4e6ypaiiika@opiums.eu')"><img src="{{ asset('public/images/jabber.gif') }}" width="16" height="16" style="vertical-align: middle; cursor: pointer;"></img>Jabber</div>
+        <br>
+        <br>
+        <div class="menu_punkt">Творчество</div>
+        <a href="/multiki" class="punkt"><img src="{{ asset('public/images/iconMultiki.png') }}" width="32" height="32" style="vertical-align: middle;">Мультики</a>
+        <a href="https://tarakashka.neonarod.com/stariysait/oldsite.html" class="punkt"><img src="{{ asset('public/images/iconOldSite.png') }}" width="32" height="32" style="vertical-align: middle;">Старый сайт</a>
+        <a href="https://tarakashka.neonarod.com/osnova/doommods.html" class="punkt">Моды для <img src="{{ asset('public/images/DOOM.png') }}" height="32" style="vertical-align: middle; margin-right: 0;">OOM</a>
+        <div class="menu_punkt">Баннеры</div>
+        <center>
+        <img src="http://neonarod.com/counter.php?userid=662&color=green" alt="counter" class="menuimage">
+        <a href="http://neonarod.com" target="_blank"><img class="menuimage" src="http://neonarod.com/counter.php?narod=1" alt="neonarod.com"></a>
+        <a href="http://narodweb.ru"><img class="menuimage" src="http://narodweb.ru/banner.gif"></a>
+        <img class="menuimage" src="http://lionovsky.ru/img/icons/mybanner2.gif">
+        <a href="http://www.kolobok.us" target="_blank"><img src="http://kolobok.us/button/kolobok_button.gif" width="88" height="31" border="0" alt="Авторские смайлы стиля КОЛОБОК"></a>
+        <a href="http://www.co.kz"><img src= "http://www.co.kz/img/co.kz.88x31.3dgreen.gif" width=88 height=31 border=0 alt="CO.KZ WebGroup"></a>
+        </center>
+        <div class="menu_punkt">Счётчики</div>
+        <center><img src="http://neonarod.com/counter.php?userid=662&color=green" alt="counter" class="menuimage">
+        <a href="https://counter.co.kz" target="_blank"><img src="https://counter.co.kz/CounterCoKz?page=tarakashka.neonarod.com&style=led_g&digits=4&start=1217" alt="Счетчик посещений Counter.CO.KZ - бесплатный счетчик на любой вкус!" border=0 width="64" height="21"></a></center>
+        <div class="menu_punkt">Мой баннер</div>
+        <center><a href="http://tarakashka.neonarod.com">
+        <img src="{{ asset('public/images/banner.gif') }}" alt="Сайт Dark-Killer228">
+        </a></center>
+    </div>
+
+    <div class="main">
+    <div class="podzagol">Информэйшн</div>
+    <h1>Всем привет!</h1>
+    <img src="{{ asset('public/images/logo.png') }}" align="right" width="64px" id="logo">
+    <p>Это просцецкий сайт <span id="age">13</span> летнего школьника. <span id="storona">Слева</span> находятся ссылки на мои контакты. Там же — кнопка на старую версию сайта (типо архив). Сижу за компом с 4 лет, вот и вырос такой умненький)))</p>
+    <h2>Обо мне</h2>
+    <p>Как говорилось выше, мне <span id="age">13</span> лет. Звать Вовкой. Я хожу в чюпырнадцатую шкАлу и живу в Нижневартовске.<br>Увлекаюсь программированием, монтажём, рисованием всего, что вижу и 3D-моделированием. Разносторонний, короче)))<br>Ну вроде всё.</p>
+    <center><img src="{{ asset('public/images/logo_name.png') }}" width="90%"></center>
+    <br>
+    <p>Это мой крутой логотип.</p>
+    <p>И да, у меня несколько ников. Ник <<4.E.6.Y.P.A.III.K.A>> я использую в Counter-Strike 1.6; Tarakashka я использую в сайтостроении и в мододелках; а Dark-Killer228 — мой основной ник.</p>
+    <br>
+    <a href="/news" class="othernews">Новости</a>
+    <a onclick="ChatPerehod()" class="othernews" style="float: left;">Чатик</a>
+    <br>
+    <br>
+    <br>
+    <img src="{{ asset('public/images/noad.gif') }}" align="right" onclick="alert('Давай сюда рекламу! Стоимость: 2000 рублей в час')" style="cursor: pointer;">
+    </div>
+{% endblock %}

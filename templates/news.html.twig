@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block back %}
+    <div class="back"><a href="../">← Назад</a></div>
+{% endblock %}
+
+{% block body %}
+    <div class="base">
+            <div class="podzagol">Все новостейки</div>
+
+            {% for post in posts | reverse %}
+                <h1>{{ post.title|raw }}</h1>
+                <p>{{ post.text|raw }}</p>
+                <p class="data">
+                    {% if post.fromMobile %}
+                        <span class="mobpost" style="margin-right: 3px;" Ttitle="Эта новость была написана с мобилки"><img src="{{ asset('images/mobilka.png') }}"></span>
+                    {% endif %}
+                    {{ post.date }}
+                </p>
+                 <br>
+                 <hr>
+            {% endfor %}
+
+            <p id="end"><b>Вот и всё!</b></p>
+    </div>
+{% endblock %}

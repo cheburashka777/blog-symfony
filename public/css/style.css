@@ -1,0 +1,296 @@
+body {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+*::selection {
+    color: red;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.main p {
+    text-align: center;
+}
+
+.wr {
+    display: grid;
+    gap: 2px;
+    padding: 2px;
+    border: 2px solid green;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1/100;
+    padding: 2px;
+    border: 1px solid rgb(206, 206, 206);
+    text-align: left;
+}
+
+.menu {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 15;
+    padding: 2px;
+    border: 1px solid rgb(206, 206, 206);
+    text-align: center;
+}
+
+.main {
+    grid-row: 2;
+    grid-column-start: 16;
+    grid-column-end: 100;
+    padding: 2px;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.base {
+    text-align: center;
+    padding: 2px;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.link img, .jab img {
+    margin-right: 5px;
+}
+
+.jab {
+    color: blue;
+    display: inline;
+}
+
+.jab:hover {
+    text-decoration: underline;
+    cursor: default;
+}
+
+.punkt img {
+    margin-right: 5px;
+}
+
+.podzagol {
+    background-color: forestgreen;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px dotted tomato;
+}
+
+.data {
+   font-style: italic;
+   text-align: right;
+   font-size: 12px;
+   margin-right: 5px;
+}
+
+.mobpost::before {
+    content: attr(Ttitle);
+    position: absolute;
+    margin: -30px 0 0 -160px;
+    z-index: 1;
+    background: rgb(247, 247, 247);
+    padding: 5px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(170, 170, 170);
+    font-style: normal;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.mobpost:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu {
+    background-color: rgb(255, 253, 219);
+}
+
+.page_body_table2 {
+    margin: auto;
+    width: 800px;
+}
+
+#end {
+    font-size: 16px;
+}
+
+#oldsite1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titri {
+    padding: 2px;
+    border: 2px solid green;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.titri div {
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.othernews {
+    border: 1px solid rgb(206, 206, 206);
+    margin: 5px;
+    padding: 1px;
+    display: block;
+    width: 55px;
+    float: right;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+}
+
+.othernews:hover {
+    text-decoration: none;
+}
+
+.player {
+    margin: 10px 15px;
+}
+
+.banneri {
+    width: 72px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back a {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.punkt {
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+    color: blue;
+}
+
+.multik {
+    text-align: center;
+}
+
+.opisanie {
+    font-size: 16px;
+}
+
+.name {
+    font-size: 26px;
+}
+
+.menuimage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu_punkt {
+    text-align: center;
+    font-weight: bold;
+    border: 2px dotted rgb(182, 112, 103);
+    margin-bottom: 10px;
+}
+
+.menumobile .punkt {
+    text-align: left;
+}
+
+.youtube-vid {
+    width: 90%;
+}
+
+.post-image {
+    width: 90%;
+}
+
+#bodyDate {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 150px;
+    background-color: white;
+    padding: 5px;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+    box-sizing: border-box;
+}
+
+.dvoetochie {
+    animation: dvoetochie 1s cubic-bezier(1, 0, 1, 0) infinite;
+}
+
+.poster {
+    background: url(../images/posterBackground.png) no-repeat;
+    background-size: cover;
+}
+
+@keyframes dvoetochie {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }  
+} 
+
+@media screen and (max-width: 768px) {
+    .header {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .menu {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .main {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    #bodyDate {
+        opacity: .3;
+        transition: all .3s;
+    }
+
+    #bodyDate:hover {
+        opacity: 1;
+        
+    }
+}
