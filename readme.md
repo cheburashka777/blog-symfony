@@ -2,7 +2,7 @@
 
 Собственный блог на PHP (Symfony).
 
-[vovan.hoster.gf](https://vovan.hoster.gf)
+[vovan.veliona.no](https://vovan.veliona.no)
 
 # Установка
 
