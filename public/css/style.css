@@ -1,6 +1,14 @@
-body {
+body, td {
     font-family: Tahoma, Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 14px !important;
+}
+
+textarea {
+    width: 177px;
+}
+
+input[type="checkbox"] {
+    margin: 0;
 }
 
 *::selection {
@@ -30,7 +38,6 @@ h2 {
 
 .wr {
     display: grid;
-    gap: 2px;
     padding: 2px;
     border: 2px solid green;
     background-color: white;
@@ -53,6 +60,7 @@ h2 {
     padding: 2px;
     border: 1px solid rgb(206, 206, 206);
     text-align: center;
+    background-color: rgb(255, 253, 219);
 }
 
 .main {
@@ -126,10 +134,6 @@ h2 {
 .mobpost:hover::before {
     opacity: 1;
     visibility: visible;
-}
-
-.menu {
-    background-color: rgb(255, 253, 219);
 }
 
 .page_body_table2 {
@@ -260,6 +264,108 @@ h2 {
     background-size: cover;
 }
 
+.adminmenu {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 15;
+    padding: 2px;
+    border: 1px solid rgb(206, 206, 206);
+    text-align: center;
+    background-color: rgb(255, 253, 219);
+}
+
+.adminmenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.adminmain {
+    padding: 2px;
+    grid-row: 2;
+    grid-column-start: 16;
+    grid-column-end: 100;
+    border: 1px solid rgb(206, 206, 206);
+    text-align: center;
+}
+
+.adminmenu-selected {
+    background-color: rgb(30 125 30);
+    border: 1px solid rgb(21 91 21);
+    color: white;
+}
+
+.adminmenu a {
+    display: block;
+    padding: 2px;
+}
+
+.admin-post-link {
+    border: 1px solid rgb(206, 206, 206);
+    margin-bottom: 2px;
+    padding: 1px;
+}
+
+.delete-link {
+    float: right;
+    color: rgb(179, 40, 40);
+}
+
+.admin-input-title {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.admin-input-title:focus, .admin-input-text:focus, .admin-input-data, .admin-input-fromMobile {
+    outline: none;
+}
+
+.admin-input-text {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    border: 1px solid rgb(206, 206, 206);
+    width: 100%;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    height: 120px;
+    resize: vertical;
+}
+
+.admin-input-data {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    border: 0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: right;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-left: auto;
+    width: 70px;
+}
+
+.admin-input-fromMobile {
+    text-align: right;
+}
+
 @keyframes dvoetochie {
     0% {
         opacity: 0;
@@ -286,6 +392,22 @@ h2 {
     .main {
         grid-row: 3;
         grid-column: 1;
+    }
+
+    .adminmenu {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .adminmain {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .wr {
+        gap: 3px;
+        line-height: 1.5em;
+        font-size: 1rem;
     }
 
     #bodyDate {

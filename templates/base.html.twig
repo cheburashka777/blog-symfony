@@ -1,3 +1,4 @@
+{% set login = login|default(false) %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -22,12 +23,17 @@
 <br>
 <div class="titri">
     <div>
-        Tarakashka, 2022-{{ "now"|date("Y") }}<br>Все права защищены.<br><a href="https://github.com/cheburashka777/blog-symfony">Исходный код</a>
+        Tarakashka, 2022-{{ "now"|date("Y") }}<br>Все права защищены.
+        <br>
+        <a href="https://github.com/cheburashka777/blog-symfony">Исходный код</a>
+        <br>
+        {% if login == true %}<a href="/admin">Админ-панель</a>{% endif %}
         <center><img src="http://lionovsky.ru/img/icons/counter.gif" alt="ЦифАрки"></center>
     </div>
 </div>
 </center>
 <button class="perehod" onclick="window.location.href = '/sekretka';">Перейти куда-то</button>
 <script src="{{ asset('public/js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>

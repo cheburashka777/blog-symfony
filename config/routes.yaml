@@ -12,10 +12,6 @@ news:
     path: /news
     controller: App\Controller\NewsController::index
 
-post:
-    path: /post
-    controller: App\Controller\PostController::createPost
-
 sekretka:
     path: /sekretka
     controller: App\Controller\SecretController::index
@@ -23,3 +19,31 @@ sekretka:
 multiki:
     path: /multiki
     controller: App\Controller\MultikiController::index
+
+admin:
+    path: /admin
+    controller: App\Controller\AdminController::index
+
+adminPage:
+    path: /admin/posts
+    controller: App\Controller\AdminController::viewPosts
+    
+createPost:
+    path: /admin/createpost
+    controller: App\Controller\AdminController::createPost
+
+deletePost:
+    path: /admin/deletepost
+    controller: App\Controller\AdminController::deletePost
+
+viewPost:
+    path: /admin/viewpost
+    controller: App\Controller\AdminController::viewPost
+
+updatePost:
+    path: /admin/updatepost
+    controller: App\Controller\AdminController::updatePost
+
+adminLogin:
+    path: /admin/login
+    controller: App\Controller\AdminController::login

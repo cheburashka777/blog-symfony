@@ -1,0 +1,59 @@
+{% set page = page|default('index') %}
+
+{% extends 'base.html.twig' %}
+
+{# {% block scripts %}
+<script src="{{ asset('public/js/ajax.js') }}"></script>
+{% endblock %} #}
+
+{% block body %}
+<div class="adminmenu">
+    <div class="podzagol">Менюха</div>
+    <ul>
+        <li><a href="/admin/posts" {% if page == "posts" %} class="adminmenu-selected" {% endif %}>Записи</a></li>
+        <li><a href="/admin/createpost" {% if page == "createpost" %} class="adminmenu-selected" {% endif %}>Создать запись</a></li>
+        <li><a href="/">Назад</a></li>
+    </ul>
+</div>
+
+<div class="adminmain">
+    <div class="podzagol">Панель</div>
+    {% if page == "viewpost" %}
+        <h2>Редактирование записи</h2>
+        <form action="/admin/updatepost?id={{ post.id }}" method="POST" id="editPost">
+            <input type="text" name="title" class="admin-input-title" placeholder="Заголовок" value="{{ post.title }}">
+            <textarea type="text" name="text" class="admin-input-text" placeholder="Текст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записи">{{ post.text }}</textarea>
+            <input type="text" name="date" class="admin-input-data" placeholder="15.08.2008" value="{{ post.date }}">
+            <div class="admin-input-fromMobile">
+                С телефона
+                <input type="checkbox" name="fromMobile" {% if post.fromMobile == true %} checked {% endif %}>
+            </div>
+            <input type="submit" value="Изменить">
+        </form>
+    {% elseif page == "posts" %}
+        <h1>Записи</h1>
+        {% for post in posts | reverse %}
+            <div class="admin-post-link">
+                <a href="/admin/viewpost?id={{ post.id }}">{{ post.title|raw }}</a>
+                <a href="/admin/deletepost?id={{ post.id }}" class="delete-link">Удалить</a>
+            </div>
+        {% endfor %}
+    {% elseif page == "createpost" %}
+        <h1>Создание записи</h1>
+        <form action="/admin/createpost" method="POST" id="createPost">
+            <input type="text" name="title" class="admin-input-title" placeholder="Заголовок">
+            <textarea type="text" name="text" class="admin-input-text" placeholder="Текст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записиТекст записи"></textarea>
+            <input type="text" name="date" class="admin-input-data" placeholder="15.08.2008" value="{{ "now"|date("m.d.Y") }}">
+            <div class="admin-input-fromMobile">
+                С телефона
+                <input type="checkbox" name="fromMobile">
+            </div>
+            <input type="submit" value="Создать">
+        </form>
+    {% else %}
+        <h1>Добро пожаловать в админскую панель!</h1>
+        <p>Здесь ты можешь делать всё, что душе вздумается)))</p>
+        <p>А если ты хакер какой-нибудь, то поздравляю, тебе удалось обойти самую мощную, крутую и инновационную систему безопасности (но всё равно кыш отсюда)</p>
+    {% endif %}
+</div>
+{% endblock %}
